@@ -1,0 +1,45 @@
+# Module 7 : Critical Thinking Assignment
+# Step 1 - Create a nested dictionary "Course_Name with necessary course names and keys 1) Room Number, 2) Instructor, 3) Meeting Time with necessary values
+Course_Name = { 'CSC101': { # Course 1
+        'Room Number': 3004, # Key / value
+        'Instructor': 'Haynes', # Key / value
+        'Meeting Time': '8:00 a.m.' # Key / value
+    },
+               'CSC102': { # Course 2
+        'Room Number': 4501, # Key / value
+        'Instructor': 'Alvarado', # Key / value
+        'Meeting Time': '9:00 a.m.' # Key / value
+    },
+               'CSC103': { # Course 3
+        'Room Number': 6755, # Key / value
+        'Instructor': 'Rich', # Key / value
+        'Meeting Time': '10:00 a.m.' # Key / value
+    },
+               'NET110': { # Course 4
+        'Room Number': 1244, # Key / value
+        'Instructor': 'Burke', # Key / value
+        'Meeting Time': '11:00 a.m.' # Key / value
+    },
+               'COM241': { # Course 5
+        'Room Number': 1411, # Key / value
+        'Instructor': 'Lee', # Key / value
+        'Meeting Time': '1:00 p.m.' # Key / value
+    },
+              }
+# Step 2 - Have the user input the course name needed to look up the information in the previously created nested dictionary
+user_input = input('Enter Course Name: ') # Create variable for user input
+
+# Step 3 - Create a while loop to execute when user inputs the course name
+while user_input != 'no course': # Beginning of while loop. If user input is "no course", then do not enter loop body
+    if user_input in Course_Name: # If statement to evaluate if the user input is in the previously created nested dictionary
+        Room_Number = Course_Name[user_input]['Room Number'] # Key 1 from nested dictionary
+        Instructor = Course_Name[user_input]['Instructor'] # Key 2 from nested dictionary
+        Meeting_Time = Course_Name[user_input]['Meeting Time'] # Key 3 from nested dictionary
+
+# Step 4 - Print information on the key value pairs in the previously created nested dictionary
+        print('Room Number:', Room_Number) # Key / value 1
+        print('Instructor:', Instructor) # Key / value 2
+        print('Meeting Time:', Meeting_Time) # Key / value 3
+
+# Step 5 - Have the user input another course name
+        user_input = input('Enter Course Name: ') # Create variable for user input
